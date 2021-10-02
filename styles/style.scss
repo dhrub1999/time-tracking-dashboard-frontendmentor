@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+$primaryBlue: hsl(246, 80%, 60%);
+$LightRed: hsl(15, 100%, 70%);
+$softBlue: hsl(195, 74%, 62%);
+$lightRed: hsl(348, 100%, 68%);
+$limeGreen: hsl(145, 58%, 55%);
+$violetSocial: hsl(264, 64%, 52%);
+$softOrange: hsl(43, 84%, 65%);
+$veryDarkBlue: hsl(226, 43%, 10%);
+$darkBlue: hsl(235, 46%, 20%);
+$desaturatedBlue: hsl(235, 45%, 61%);
+$paleBlue: hsl(236, 100%, 87%);
+$fontSize: 18px;
+$fontFamily: "Rubik", Arial, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $veryDarkBlue;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  width: 100%;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.flex-container {
+  min-width: 100%;
+  background: $veryDarkBlue;
+  display: grid;
+  grid-auto-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "profile-card-container . . ."
+    "profile-card-container . . .";
+  width: 89.2%;
+  margin: 0 auto;
+  height: 100%;
+}
+.profile-card-container {
+  grid-area: profile-card-container;
+  background: $darkBlue;
+  border-radius: 10px;
+
+  .top-container {
+    background: $primaryBlue;
+    padding: 20px 0px 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+
+    .img-container {
+      height: 54px;
+      width: 54px;
+      background: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    span {
+      margin-top: 20px;
+      display: block;
+      color: $paleBlue;
+      font-size: 10px;
+      font-weight: 300;
+      font-family: $fontFamily;
+    }
+
+    .name {
+      display: block;
+      margin-top: 5px;
+      font-family: $fontFamily;
+      font-weight: 300;
+      color: white;
+      font-size: 30px;
+      letter-spacing: 1px;
+      line-height: 35px;
+    }
+  }
+
+  .bottom-container {
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: $fontFamily;
+    color: $paleBlue;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    cursor: pointer;
+
+    span {
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: white;
+      }
+
+      &:active {
+        color: white;
+      }
+    }
+
+    .bolded {
+      color: white;
+      font-weight: 400;
+    }
+  }
+}
+
+.container {
+  background: $LightRed;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+
+  &:hover .other-texts {
+    background: hsl(246, 45%, 35%);
+  }
+
+  .svg-container {
+    float: right;
+
+    img {
+      position: absolute;
+      right: 5%;
+      top: -10px;
+      height: 50px;
+    }
+  }
+
+  .other-texts {
+    background: $darkBlue;
+    height: 80%;
+    position: relative;
+    z-index: 20;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    .nav-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .bolded {
+        color: white;
+        font-family: $fontFamily;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .dot-menu {
+        display: flex;
+        gap: 5px;
+        cursor: pointer;
+
+        div {
+          height: 3px;
+          width: 3px;
+          border-radius: 1.5px;
+          background: white;
+        }
+      }
+    }
+
+    .time {
+      display: block;
+      margin-top: 10px;
+      color: white;
+      font-weight: 300;
+      font-family: $fontFamily;
+      font-size: 40px;
+    }
+
+    .faded {
+      font-family: $fontFamily;
+      font-size: 12px;
+      margin-top: 5px;
+      color: $paleBlue;
+    }
+  }
+}
+
+.work {
+  .other-texts {
+    background: hsl(246, 45%, 35%);
+  }
+}
+
+.play {
+  background: $softBlue;
+}
+
+.study {
+  background: $lightRed;
+}
+
+.exercise {
+  background: $limeGreen;
+}
+
+.social {
+  background: $violetSocial;
+}
+
+.self-care {
+  background: $softOrange;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $softOrange;
+  font-family: $fontFamily;
+  letter-spacing: 1px;
+  font-size: 18px;
+
+  .mylink {
+    color: $limeGreen;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $softBlue;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .main {
+    min-height: 100vh;
+    overflow: unset;
+    padding: 30px 0;
+    width: 100%;
+
+    .flex-container {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-auto-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 10px 10px;
+      grid-template-areas:
+        "profile-card-container"
+        "profile-card-container"
+        "."
+        "."
+        "."
+        "."
+        ".";
+      width: 100%;
+      min-height: 200vh;
+      overflow: unset;
+    }
+    .profile-card-container {
+      grid-area: profile-card-container;
+    }
+  }
+}

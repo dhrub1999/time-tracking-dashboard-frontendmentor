@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #0f1424;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 100%;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.flex-container {
+  min-width: 100%;
+  background: #0f1424;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr;
+  gap: 20px 20px;
+      grid-template-areas: "profile-card-container . . ." "profile-card-container . . .";
+  width: 89.2%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.profile-card-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: profile-card-container;
+  background: #1c1f4a;
+  border-radius: 10px;
+}
+
+.profile-card-container .top-container {
+  background: #5847eb;
+  padding: 20px 0px 50px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.profile-card-container .top-container .img-container {
+  height: 54px;
+  width: 54px;
+  background: white;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.profile-card-container .top-container .img-container img {
+  height: 50px;
+}
+
+.profile-card-container .top-container span {
+  margin-top: 20px;
+  display: block;
+  color: #bdc1ff;
+  font-size: 10px;
+  font-weight: 300;
+  font-family: "Rubik", Arial, sans-serif;
+}
+
+.profile-card-container .top-container .name {
+  display: block;
+  margin-top: 5px;
+  font-family: "Rubik", Arial, sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+
+.profile-card-container .bottom-container {
+  padding: 20px 0 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  font-family: "Rubik", Arial, sans-serif;
+  color: #bdc1ff;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.profile-card-container .bottom-container span {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.profile-card-container .bottom-container span:hover {
+  color: white;
+}
+
+.profile-card-container .bottom-container span:active {
+  color: white;
+}
+
+.profile-card-container .bottom-container .bolded {
+  color: white;
+  font-weight: 400;
+}
+
+.container {
+  background: #ff8c66;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container:hover .other-texts {
+  background: #393181;
+}
+
+.container .svg-container {
+  float: right;
+}
+
+.container .svg-container img {
+  position: absolute;
+  right: 5%;
+  top: -10px;
+  height: 50px;
+}
+
+.container .other-texts {
+  background: #1c1f4a;
+  height: 80%;
+  position: relative;
+  z-index: 20;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container .other-texts .nav-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .other-texts .nav-div .bolded {
+  color: white;
+  font-family: "Rubik", Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.container .other-texts .nav-div .dot-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.container .other-texts .nav-div .dot-menu div {
+  height: 3px;
+  width: 3px;
+  border-radius: 1.5px;
+  background: white;
+}
+
+.container .other-texts .time {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-weight: 300;
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 40px;
+}
+
+.container .other-texts .faded {
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #bdc1ff;
+}
+
+.work .other-texts {
+  background: #393181;
+}
+
+.play {
+  background: #56c2e6;
+}
+
+.study {
+  background: #ff5c7c;
+}
+
+.exercise {
+  background: #4acf81;
+}
+
+.social {
+  background: #7536d3;
+}
+
+.self-care {
+  background: #f1c65b;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #f1c65b;
+  font-family: "Rubik", Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.attribution .mylink {
+  color: #4acf81;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.attribution .mylink:hover {
+  color: #56c2e6;
+}
+
+@media (min-width: 375px) {
+  .main {
+    min-height: 100vh;
+    overflow: unset;
+    padding: 30px 0;
+    width: 100%;
+  }
+  .main .flex-container {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+        grid-template-areas: "profile-card-container" "profile-card-container" "." "." "." "." ".";
+    width: 100%;
+    min-height: 200vh;
+    overflow: unset;
+  }
+  .main .profile-card-container {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: profile-card-container;
+  }
+}
+/*# sourceMappingURL=style.css.map */
